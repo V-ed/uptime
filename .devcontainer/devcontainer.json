@@ -1,0 +1,21 @@
+{
+	"name": "fullstacked",
+
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"tamasfe.even-better-toml"
+			]
+		}
+	},
+
+	"remoteEnv": {
+		"TZ": "${localEnv:TZ:Canada/Eastern}",
+		"FLYCTL_INSTALL": "/home/vscode/.fly",
+		"PATH": "${containerEnv:PATH}:/home/vscode/.fly/bin"
+	},
+	
+	"postCreateCommand": "curl -L https://fly.io/install.sh | sh"
+}
