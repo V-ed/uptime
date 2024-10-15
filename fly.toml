@@ -7,6 +7,7 @@ app = "v-ed-uptime"
 primary_region = "yul"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
+swap_size_mb = 256
 
 [experimental]
   auto_rollback = true
