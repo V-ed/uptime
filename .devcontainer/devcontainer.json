@@ -16,6 +16,14 @@
 		"FLYCTL_INSTALL": "/home/vscode/.fly",
 		"PATH": "${containerEnv:PATH}:/home/vscode/.fly/bin"
 	},
-	
+
+	"mounts": [
+		{
+			"source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
+			"target": "/home/vscode/.ssh",
+			"type": "bind"
+		}
+	],
+
 	"postCreateCommand": "curl -L https://fly.io/install.sh | sh"
 }
